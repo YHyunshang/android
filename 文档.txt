@@ -1,20 +1,20 @@
 
-1.RecyclerView-Adapter                 RecyclerView 适配器封装
-2.RecyclerView-ItemDecoration          RecyclerView ItemDecoration
-3.RecyclerView-Ext                     RecyclerView扩展方法
+-- RecyclerView-Adapter                 RecyclerView 适配器封装
+-- RecyclerView-ItemDecoration          RecyclerView ItemDecoration
+-- RecyclerView-Ext                     RecyclerView扩展方法
 
-1.http-core         封装okttp、retrofit、livedata
-2.http-cache        网络缓存
+-- http-core         封装okttp、retrofit、livedata
+-- http-cache        网络缓存
 
-
-
-1.base
-2.base_ui
-3.lib_log
-4.lib_toast
-5.lib_share
-6.lib_pay
-7.lib_imageLoader
-8.lib_baiduMap
-9.lib_utils
-10.lib_widget
+-- base  基础模块（Activity/Fragment/Dialog arouter event bus）
+-- base_ui  基础业务模块
+-- lib_utils 基础工具类
+-- lib_log log模块
+-- lib_toast toast模块
+-- lib_share 分享模块
+-- lib_pay  支付模块
+-- lib_imageLoader 图片加载
+-- lib_baiduMap  百度地图定位
+-- lib_widget  ui组件 Imageview RefreshActivity等
+-- lib_video  视频播放
+-- lib_debug 调试工具

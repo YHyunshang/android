@@ -13,6 +13,9 @@ import com.yh.viewmodel.MainViewModel
 class MainActivity : BaseUIActivity<MainViewModel, ActivityMainBinding>() {
 
     override fun initListener() {
+        mViewBinding.testNet.setOnClickListener {
+            mViewModel.getTels()
+        }
     }
 
     override fun lifecycleObserver() {
@@ -22,6 +25,5 @@ class MainActivity : BaseUIActivity<MainViewModel, ActivityMainBinding>() {
     }
 
     override fun loadData() {
-        mViewModel.getTels()
     }
 }
