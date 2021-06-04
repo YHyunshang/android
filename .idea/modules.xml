@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android_scaffold.iml" filepath="$PROJECT_DIR$/.idea/modules/android_scaffold.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android_scaffold.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android_scaffold.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base/android_scaffold.base.iml" filepath="$PROJECT_DIR$/.idea/modules/base/android_scaffold.base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base-ui/android_scaffold.base-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/base-ui/android_scaffold.base-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/android_scaffold.base_library.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/android_scaffold.base_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/RecyclerView-Adapter/android_scaffold.base_library.RecyclerView-Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/RecyclerView-Adapter/android_scaffold.base_library.RecyclerView-Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/RecyclerView-Ext/android_scaffold.base_library.RecyclerView-Ext.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/RecyclerView-Ext/android_scaffold.base_library.RecyclerView-Ext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/RecyclerView-ItemDecoration/android_scaffold.base_library.RecyclerView-ItemDecoration.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/RecyclerView-ItemDecoration/android_scaffold.base_library.RecyclerView-ItemDecoration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/http-cache/android_scaffold.base_library.http-cache.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/http-cache/android_scaffold.base_library.http-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/http-core/android_scaffold.base_library.http-core.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/http-core/android_scaffold.base_library.http-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/lib-log/android_scaffold.base_library.lib-log.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/lib-log/android_scaffold.base_library.lib-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/lib-utils/android_scaffold.base_library.lib-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/lib-utils/android_scaffold.base_library.lib-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/lib_wheel/android_scaffold.base_library.lib_wheel.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/lib_wheel/android_scaffold.base_library.lib_wheel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_library/lib_widget/android_scaffold.base_library.lib_widget.iml" filepath="$PROJECT_DIR$/.idea/modules/base_library/lib_widget/android_scaffold.base_library.lib_widget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo/android_scaffold.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo/android_scaffold.demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo/Recyclerview-Adapter/android_scaffold.demo.Recyclerview-Adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/demo/Recyclerview-Adapter/android_scaffold.demo.Recyclerview-Adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/android_scaffold.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/android_scaffold.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/BaiduMap/android_scaffold.library.BaiduMap.iml" filepath="$PROJECT_DIR$/.idea/modules/library/BaiduMap/android_scaffold.library.BaiduMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/ImageLoader/android_scaffold.library.ImageLoader.iml" filepath="$PROJECT_DIR$/.idea/modules/library/ImageLoader/android_scaffold.library.ImageLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/pay/android_scaffold.library.pay.iml" filepath="$PROJECT_DIR$/.idea/modules/library/pay/android_scaffold.library.pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/photoview/android_scaffold.library.photoview.iml" filepath="$PROJECT_DIR$/.idea/modules/library/photoview/android_scaffold.library.photoview.iml" />
+    </modules>
+  </component>
+</project>

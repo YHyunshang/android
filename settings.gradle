@@ -1,6 +1,6 @@
 
 include ':demo:Recyclerview-Adapter'
-rootProject.name = "yh-tob-trading-app"
+rootProject.name = "android_scaffold"
 
 include ':base'
 include ':app'

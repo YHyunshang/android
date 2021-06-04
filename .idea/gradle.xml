@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/base-ui" />
+            <option value="$PROJECT_DIR$/base_library" />
+            <option value="$PROJECT_DIR$/base_library/RecyclerView-Adapter" />
+            <option value="$PROJECT_DIR$/base_library/RecyclerView-Ext" />
+            <option value="$PROJECT_DIR$/base_library/RecyclerView-ItemDecoration" />
+            <option value="$PROJECT_DIR$/base_library/http-cache" />
+            <option value="$PROJECT_DIR$/base_library/http-core" />
+            <option value="$PROJECT_DIR$/base_library/lib-log" />
+            <option value="$PROJECT_DIR$/base_library/lib-utils" />
+            <option value="$PROJECT_DIR$/base_library/lib_wheel" />
+            <option value="$PROJECT_DIR$/base_library/lib_widget" />
+            <option value="$PROJECT_DIR$/demo" />
+            <option value="$PROJECT_DIR$/demo/Recyclerview-Adapter" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/BaiduMap" />
+            <option value="$PROJECT_DIR$/library/ImageLoader" />
+            <option value="$PROJECT_DIR$/library/pay" />
+            <option value="$PROJECT_DIR$/library/photoview" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
