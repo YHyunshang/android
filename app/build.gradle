@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.appId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+
+        //配置eventbus索引类
+        kapt {
+            arguments {
+                // 根据项目实际情况，指定辅助索引类的名称和包名
+                arg('eventBusIndex', 'com.yh.AppEventBusIndex')
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'trading'
+            keyPassword 'yhtrading123'
+            storeFile file('trading.ks')
+            storePassword 'yhtrading123'
+        }
+        release {
+            keyAlias 'trading'
+            keyPassword 'yhtrading123'
+            storeFile file('trading.ks')
+            storePassword 'yhtrading123'
+        }
+    }
+
+    buildTypes {
+        debug{
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            ndk {
+                // 设置支持的SO库架构
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+                abiFilters 'armeabi','x86_64'
+            }
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            ndk {
+                // 设置支持的SO库架构
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+                abiFilters 'armeabi'
+            }
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            System.out.println("ToB app rename " + outputFile)
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.name.contains("Release")) {
+                    def fileName = "ToB_${defaultConfig.versionName}_release.apk"
+                    output.outputFileName = fileName
+
+                } else {
+                    def fileName = "ToB_${defaultConfig.versionName}_debug.apk"
+                    output.outputFileName = fileName
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation project(":base-ui")
+    testApi rootProject.ext.dependencies.junit
+    testApi rootProject.ext.dependencies.test_core
+    testApi rootProject.ext.dependencies.mockito_core
+    testApi rootProject.ext.dependencies.robolectric
+    androidTestApi rootProject.ext.dependencies.runner
+    androidTestApi rootProject.ext.dependencies.rules
+    androidTestApi rootProject.ext.dependencies.espresso_core
+    androidTestApi rootProject.ext.dependencies.test_uiautomator
+    androidTestApi rootProject.ext.dependencies.test_hamcrest
+
+//    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+//    implementation 'androidx.navigation:navigation-ui:2.3.3'
+//    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+
+    // Navigation
+    implementation rootProject.ext.dependencies.navigation_runtime_ktx
+    implementation rootProject.ext.dependencies.navigation_fragment_ktx
+    implementation rootProject.ext.dependencies.navigation_ui_ktx
+
+    //ARouter注解处理器
+    kapt rootProject.ext.dependencies.ARouter_processor
+
+    //eventbus注解处理器
+    kapt rootProject.ext.dependencies.eventbus_annotation
+
+    api 'com.tencent.bugly:crashreport:+'
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/dialog_shape_bg_gravity_bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/call_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/dialog_title_call_phone"
+        android:textColor="@color/textColor_grey_black"
+        android:textSize="@dimen/textSize_larger" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/text_cancel"
+        android:textColor="@color/textColor_red"
+        android:textSize="@dimen/textSize_larger" />
+</LinearLayout>

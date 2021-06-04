@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    api project(":base_library:lib-utils")
+    api project(":base_library:http-core")
+
+    //Glide
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.glide_transformations
+    annotationProcessor rootProject.ext.dependencies.glide_compiler
+
+    //okhttp retrofit
+    api rootProject.ext.dependencies.okhttp3
+    api rootProject.ext.dependencies.okhttp3_logging_interceptor
+    api rootProject.ext.dependencies.retrofit2
+    api rootProject.ext.dependencies.retrofit2_adapter_rxjava2
+    api rootProject.ext.dependencies.retrofit2_converter_gson
+}

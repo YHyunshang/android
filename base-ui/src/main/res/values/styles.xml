@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ActivityAnimationStyle" parent="@android:style/Animation.Activity">
+        <item name="android:activityCloseEnterAnimation">@anim/activity_pop_enter_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_pop_exit_anim</item>
+        <item name="android:activityOpenEnterAnimation">@anim/activity_enter_anim</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_exit_anim</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/activity_pop_enter_anim</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/activity_pop_exit_anim</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/activity_enter_anim</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/activity_exit_anim</item>
+    </style>
+
+    <style name="ActivityNoAnimationStyle">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="Theme.ToBApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ToBApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="actionbarSearch">
+        <item name="android:background">@drawable/actionbar_shape_bg_search</item>
+        <item name="android:layout_height">@dimen/actionbar_bar_search_height</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:text">确认</item>
+        <item name="android:gravity">center</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/btn_bg_red_radiu23</item>
+        <item name="android:textColor">@color/textColor_white</item>
+        <item name="android:textSize">@dimen/textSize_big</item>
+        <item name="android:layout_marginLeft">@dimen/dp_12</item>
+        <item name="android:layout_marginRight">@dimen/dp_12</item>
+    </style>
+
+    <style name="dialogFullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Theme.Dialog" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="activityTransluteFullScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimationStyle</item>
+    </style>
+
+    <style name="activityTransluteFullScreenNoAnim" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ActivityNoAnimationStyle</item>
+    </style>
+
+    <style name="MyDialog" parent="Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="DotNumberStyle">
+        <item name="android:background">@drawable/shape_bg_dot_number</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">@dimen/dp_20</item>
+        <item name="android:minHeight">@dimen/dp_20</item>
+        <item name="android:paddingLeft">@dimen/dp_5</item>
+        <item name="android:paddingRight">@dimen/dp_5</item>
+        <item name="android:text">0</item>
+        <item name="android:textColor">@color/textColor_white</item>
+        <item name="android:textSize">@dimen/textSize_small</item>
+    </style>
+
+    <style name="LineHorStyle">
+        <item name="android:background">@color/color_divider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_line</item>
+    </style>
+
+    <style name="LineVerStyle">
+        <item name="android:background">@color/color_divider</item>
+        <item name="android:layout_width">@dimen/dp_line</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 圆角图片 -->
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <!-- 25%圆角图片 -->
+    <style name="roundedCornerImageStyle25">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <!-- 6dp圆角图片 -->
+    <style name="roundedCornerImageStyle6dp">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+</resources>

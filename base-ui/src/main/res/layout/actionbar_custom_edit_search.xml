@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_search"
+    style="@style/actionbarSearch"
+    android:layout_gravity="left|center"
+    android:drawableLeft="@drawable/actionbar_ic_search_edit"
+    android:drawablePadding="@dimen/dp_3"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="@dimen/dp_8"
+    android:paddingRight="@dimen/dp_12"
+    android:lines="1"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:textColor="@color/textColor_grey_black"
+    android:textColorHint="@color/textColor_hint"
+    android:textSize="@dimen/textSize_normal" />

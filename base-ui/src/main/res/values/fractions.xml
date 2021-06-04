@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="activity_anim_scale_exit_x">1</fraction>
+    <fraction name="activity_anim_scale_enter_x">1</fraction>
+    <fraction name="activity_anim_scale_exit_y">1</fraction>
+    <fraction name="activity_anim_scale_enter_y">1</fraction>
+
+
+    <fraction name="activity_anim_alpha_enter">1</fraction>
+    <fraction name="activity_anim_alpha_exit">1</fraction>
+</resources>

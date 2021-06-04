@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="color_status_action_bar">#ffffff</color>
+    <color name="textColor_black">#000000</color>
+    <color name="textColor_grey_black">#333333</color>
+    <color name="textColor_grey_normal">#666666</color>
+    <color name="textColor_grey_light">#999999</color>
+    <color name="textColor_hint">#aaaaaa</color>
+    <color name="textColor_white">#ffffff</color>
+    <color name="textColor_red">#F5222D</color>
+    <color name="textColor_red_shallow">#FF4D4F</color>
+    <color name="textColor_4d4d4d">#4d4d4d</color>
+    <color name="textColor_cccccc">#cccccc</color>
+</resources>

@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from:"config.gradle"
+    ext {
+        version["kotlinGradlePluginSdkVersion"] = '1.4.32'
+        version["kotlinGradlePluginSdkVersion"] = '1.4.32'
+        version["kotlinGradlePluginSdkVersion"] = '1.4.32'
+        version["kotlinGradlePluginSdkVersion"] = '1.4.32'
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath rootProject.ext.dependencies.android_gradle_plugin
+        classpath rootProject.ext.dependencies.kotlin_gradle_plugin
+        classpath rootProject.ext.dependencies.navigation_safe_args_plugin
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
+        flatDir {
+            dirs project(':library:pay').file('libs'), 'libs'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_radius12"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_24"
+        android:textColor="@color/textColor_grey_normal"
+        android:textSize="@dimen/textSize_normal" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_18"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/text_cancel"
+            android:background="@drawable/shape_border_999999_radiu_23"
+            android:textColor="@color/textColor_grey_normal"
+            android:textSize="@dimen/textSize_big" />
+
+        <View
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:background="@drawable/btn_bg_red_radiu23"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/text_ok"
+            android:textColor="@color/textColor_white"
+            android:textSize="@dimen/textSize_big" />
+    </LinearLayout>
+
+</LinearLayout>

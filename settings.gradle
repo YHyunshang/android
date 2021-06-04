@@ -1,0 +1,30 @@
+
+include ':demo:Recyclerview-Adapter'
+rootProject.name = "yh-tob-trading-app"
+
+include ':base'
+include ':app'
+include ':base-ui'
+include 'demo'
+
+
+//base library
+include ':base_library'
+include ':base_library:lib-utils'
+include ':base_library:lib-log'
+include ':base_library:http-core'
+include ':base_library:http-cache'
+include ':base_library:RecyclerView-Adapter'
+include ':base_library:RecyclerView-ItemDecoration'
+include ':base_library:RecyclerView-Ext'
+include ':base_library:lib_widget'
+include ':base_library:lib_wheel'
+
+//基础sdk库
+include ':library'
+
+//图片加载组建
+include ':library:ImageLoader'
+include ':library:photoview'
+include ':library:BaiduMap'
+include ':library:pay'

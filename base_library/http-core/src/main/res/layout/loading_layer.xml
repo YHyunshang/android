@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loading_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff6f6f6"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="正在加载"
+            android:textColor="#999999"
+            android:textSize="18dp" />
+
+        <com.yh.base.ui.view.ProgressWheel
+            android:id="@+id/progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            app:matProg_barColor="#8F999999"
+            app:matProg_barWidth="3dp"
+            app:matProg_circleRadius="28dp"
+            app:matProg_progressIndeterminate="true"
+            app:matProg_spinSpeed="1.0" />
+    </LinearLayout>
+
+</RelativeLayout>

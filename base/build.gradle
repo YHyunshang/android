@@ -1,0 +1,144 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    //使用Kotlin实验特性
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+dependencies {
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.recyclerview
+    api rootProject.ext.dependencies.legacy_support
+    api rootProject.ext.dependencies.google_flexbox
+
+    //ARouter
+    api rootProject.ext.dependencies.ARouter
+
+    //RXJava2
+    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxandroid2
+    api rootProject.ext.dependencies.rxbinding2
+
+    //Glide
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.glide_transformations
+    annotationProcessor rootProject.ext.dependencies.glide_compiler
+
+    //xxpermissions
+    api rootProject.ext.dependencies.xxpermissions
+
+    //smart refresh layout
+    api rootProject.ext.dependencies.smart_refresh_kernel //核心必须依赖
+    api rootProject.ext.dependencies.smart_refresh_classics//经典刷新头
+    api rootProject.ext.dependencies.smart_refresh_radar //雷达刷新头
+    api rootProject.ext.dependencies.smart_refresh_falsify//虚拟刷新头
+    api rootProject.ext.dependencies.smart_refresh_material//谷歌刷新头
+    api rootProject.ext.dependencies.smart_refresh_two_level//二级刷新头
+    api rootProject.ext.dependencies.smart_refresh_footer_ball//球脉冲加载
+    api rootProject.ext.dependencies.smart_refresh_footer_classics//经典加载
+
+    //bga banner
+    api rootProject.ext.dependencies.bga_banner
+
+    //okhttp retrofit
+    api rootProject.ext.dependencies.okhttp3
+    api rootProject.ext.dependencies.okhttp3_logging_interceptor
+    api rootProject.ext.dependencies.retrofit2
+    api rootProject.ext.dependencies.retrofit2_adapter_rxjava2
+    api rootProject.ext.dependencies.retrofit2_converter_gson
+
+    //mmkv
+    api rootProject.ext.dependencies.mmkv
+    //kotlin
+    api rootProject.ext.dependencies.multidex
+    api rootProject.ext.dependencies.core_ktx
+    api rootProject.ext.dependencies.kotlin_stdlib
+    api rootProject.ext.dependencies.lifecycle_extensions
+    api rootProject.ext.dependencies.lifecycle_runtime
+    api rootProject.ext.dependencies.lifecycle_livedata_ktx
+    api rootProject.ext.dependencies.lifecycle_viewmodel_ktx
+    api rootProject.ext.dependencies.unpeek_livedata
+    api rootProject.ext.dependencies.fragment_ktx
+    api rootProject.ext.dependencies.kotlinx_coroutines_core
+    api rootProject.ext.dependencies.kotlinx_coroutines_android
+
+    //gson
+    api rootProject.ext.dependencies.gson
+
+    //Log打印
+    api rootProject.ext.dependencies.logger_core
+    api rootProject.ext.dependencies.logger_android
+
+    //eventbus
+    api rootProject.ext.dependencies.eventbus
+
+    //immersionbar
+    api rootProject.ext.dependencies.immersionbar
+    api rootProject.ext.dependencies.immersionbar_components
+    api rootProject.ext.dependencies.immersionbar_ktx
+
+    //图片加载框架
+    api project(path: ':library:ImageLoader')
+
+    //Room
+    api rootProject.ext.dependencies.room_runtime
+    api rootProject.ext.dependencies.room_ktx
+    testApi rootProject.ext.dependencies.room_testing
+
+
+    //http 请求
+//    api project(":base_library:http-core")
+    //http 缓存
+    api project(":base_library:http-cache")
+    api project(":base_library:RecyclerView-Adapter")
+    api project(":base_library:RecyclerView-ItemDecoration")
+    api project(":base_library:lib_widget")
+}

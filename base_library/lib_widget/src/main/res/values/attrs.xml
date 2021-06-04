@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--AutoLinkStyleTextView-->
+    <declare-styleable name="AutoLinkStyleTextView">
+        <attr name="AutoLinkStyleTextView_text_value" format="string|reference" />
+        <attr name="AutoLinkStyleTextView_default_color" format="color|reference" />
+        <attr name="AutoLinkStyleTextView_has_under_line" format="boolean" />
+        <attr name="AutoLinkStyleTextView_start_image" format="reference" />
+        <attr name="AutoLinkStyleTextView_text_value_split" format="string" />
+        <attr name="AutoLinkStyleTextView_type">
+            <enum name="start_image" value="0" />
+            <enum name="content_text" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MaxRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="pickerview_textSize" format="dimension" />
+        <attr name="pickerview_textColorOut" format="color" />
+        <attr name="pickerview_textColorCenter" format="color" />
+        <attr name="pickerview_dividerColor" format="color" />
+        <attr name="pickerview_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="PanelStyleLayout">
+        <attr name="isNoNull" format="boolean" />
+        <attr name="nullTitleSize" format="dimension|reference" />
+        <attr name="isShowArrow" format="boolean" />
+        <attr name="isShowSwitch" format="boolean" />
+        <attr name="lineNumber" format="integer" />
+        <attr name="maxLength" format="integer" />
+        <attr name="textTitle" format="string|reference" />
+        <attr name="textTitleColor" format="color|reference" />
+        <attr name="textTitleSize" format="dimension|reference" />
+        <attr name="hintEditText" format="string|reference" />
+        <attr name="hintEditTextColor" format="color|reference" />
+        <attr name="hintEditTextSize" format="dimension|reference" />
+        <attr name="editTextColor" format="color|reference" />
+        <attr name="editTextSize" format="dimension|reference" />
+        <attr name="imgSwitchSrc" format="reference" />
+        <attr name="layoutId" format="reference" />
+        <attr name="idTvTitle" format="integer|reference" />
+        <attr name="idEditText" format="integer|reference" />
+        <attr name="idImageArrow" format="integer|reference" />
+        <attr name="idViewNoNull" format="integer|reference" />
+        <attr name="idImageSwitch" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FancyIndexer">
+        <attr name="widthOffset" format="dimension|reference" />
+        <attr name="minFontSize" format="dimension|reference" />
+        <attr name="maxFontSize" format="dimension|reference" />
+        <attr name="tipFontSize" format="dimension|reference" />
+        <attr name="maxBezierHeight" format="dimension|reference" />
+        <attr name="maxBezierWidth" format="dimension|reference" />
+        <attr name="maxBezierLines" format="integer" />
+        <attr name="additionalTipOffset" format="dimension|reference" />
+        <attr name="fontColor" format="color|reference" />
+        <attr name="tipFontColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="YHSmartRefreshLayout">
+        <attr name="isWillNextType" format="boolean" />
+        <attr name="isWillPreType" format="boolean" />
+        <attr name="refresh_srlTextPulling" format="string|reference" />
+        <attr name="refresh_srlTextRelease" format="string|reference" />
+        <attr name="loadMore_srlTextPulling" format="string|reference" />
+        <attr name="loadMore_srlTextRelease" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SquaredImageView">
+        <attr name="isSameHeight" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ActionBarLayout">
+        <attr name="android:layout" format="reference"/>
+        <attr name="isShowStatusBarHeight" format="boolean"></attr>
+        <attr name="actionBarBackground" format="reference|color"></attr>
+        <attr name="fractionAlpha" format="reference|float"></attr>
+
+    </declare-styleable>
+</resources>

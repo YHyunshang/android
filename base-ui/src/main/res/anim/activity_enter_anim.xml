@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/activity_animTime"
+    android:interpolator="@android:anim/linear_interpolator">
+    <translate
+        android:fromXDelta="100%p"
+        android:fromYDelta="0%p"
+        android:toXDelta="0"
+        android:toYDelta="0" />
+    <alpha
+        android:fromAlpha="@fraction/activity_anim_alpha_exit"
+        android:toAlpha="@fraction/activity_anim_alpha_enter" />
+
+    <scale
+        android:fromXScale="@fraction/activity_anim_scale_exit_x"
+        android:fromYScale="@fraction/activity_anim_scale_exit_y"
+        android:pivotX="50%p"
+        android:pivotY="50%p"
+        android:toXScale="@fraction/activity_anim_scale_enter_x"
+        android:toYScale="@fraction/activity_anim_scale_enter_y" />
+</set>

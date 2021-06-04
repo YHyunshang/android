@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="money_yuan">¥</string>
+    <string name="money_yuan_1">￥%1s</string>
+    <string name="qi">起</string>
+    <string name="gong">共</string>
+    <string name="jian">件</string>
+    <string name="symbol_connect">~</string>
+    <string name="add_cart">加入购物车</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_ok">确定</string>
+    <string name="follow">+ 关注</string>
+    <string name="followed">已关注</string>
+    <string name="coupon">优惠</string>
+    <string name="text_sure">确认</string>
+    <string name="text_clear">清空</string>
+    <string name="text_save">保存</string>
+    <string name="text_delete">删除</string>
+    <string name="phone_service">0000000000</string>
+    <string name="dialog_title_call_phone">拨打客服电话</string>
+    <string name="Permission_call_phone">需要授予打电话权限</string>
+    <string name="contact_the_merchant">联系商家</string>
+    <string name="cart">购物车</string>
+    <string name="to_settle_accounts">去结算</string>
+    <string name="apple">苹果</string>
+    <string name="credit_payment">信控支付</string>
+
+
+    <string name="receiver_address">收货地址</string>
+    <string name="receiver_name">收货人</string>
+    <string name="receiver_phone">手机号</string>
+    <string name="receiver_address_hint">小区、街道、写字楼、学校</string>
+    <string name="receiver_address_hint_1">请输入收货地址</string>
+    <string name="receiver_name_hint">请输入收货人姓名</string>
+    <string name="receiver_phone_hint">请输入收货人手机号码</string>
+    <string name="receiver_floor">楼号门牌</string>
+    <string name="receiver_floor_hint">例：5号楼301室</string>
+    <string name="format_error_phone_tip">请输入正确的手机号</string>
+
+    <!--  订单  -->
+    <string name="order_type_delivery">[配送]</string>
+    <string name="order_type_pick_up">[自提]</string>
+    <string name="order_order_time_a">%s 下单</string>
+    <string name="order_good_num_a">共%s款商品，实付</string>
+
+    <string name="text_empty_retry">重试</string>
+</resources>

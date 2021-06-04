@@ -1,0 +1,20 @@
+
+1.RecyclerView-Adapter                 RecyclerView 适配器封装
+2.RecyclerView-ItemDecoration          RecyclerView ItemDecoration
+3.RecyclerView-Ext                     RecyclerView扩展方法
+
+1.http-core         封装okttp、retrofit、livedata
+2.http-cache        网络缓存
+
+
+
+1.base
+2.base_ui
+3.lib_log
+4.lib_toast
+5.lib_share
+6.lib_pay
+7.lib_imageLoader
+8.lib_baiduMap
+9.lib_utils
+10.lib_widget
