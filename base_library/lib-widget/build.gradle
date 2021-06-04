@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api rootProject.ext.dependencies.android_material
+    api rootProject.ext.dependencies.bga_banner
+
+    //smart refresh layout
+    api rootProject.ext.dependencies.smart_refresh_kernel //核心必须依赖
+    api rootProject.ext.dependencies.smart_refresh_classics//经典刷新头
+    api rootProject.ext.dependencies.smart_refresh_radar //雷达刷新头
+    api rootProject.ext.dependencies.smart_refresh_falsify//虚拟刷新头
+    api rootProject.ext.dependencies.smart_refresh_material//谷歌刷新头
+    api rootProject.ext.dependencies.smart_refresh_two_level//二级刷新头
+    api rootProject.ext.dependencies.smart_refresh_footer_ball//球脉冲加载
+    api rootProject.ext.dependencies.smart_refresh_footer_classics//经典加载
+}

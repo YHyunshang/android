@@ -140,5 +140,5 @@ dependencies {
     api project(":base_library:http-cache")
     api project(":base_library:RecyclerView-Adapter")
     api project(":base_library:RecyclerView-ItemDecoration")
-    api project(":base_library:lib_widget")
+    api project(':base_library:lib-widget')
 }

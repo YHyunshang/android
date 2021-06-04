@@ -17,8 +17,8 @@ include ':base_library:http-cache'
 include ':base_library:RecyclerView-Adapter'
 include ':base_library:RecyclerView-ItemDecoration'
 include ':base_library:RecyclerView-Ext'
-include ':base_library:lib_widget'
-include ':base_library:lib_wheel'
+include ':base_library:lib-widget'
+include ':base_library:lib-wheel'
 
 //基础sdk库
 include ':library'
