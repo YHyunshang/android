@@ -3,12 +3,11 @@ include ':demo:Recyclerview-Adapter'
 rootProject.name = "android_scaffold"
 
 include ':base'
-include ':app'
 include ':base-ui'
+include ':app'
 include 'demo'
 
-
-//base library
+//基础sdk库
 include ':base_library'
 include ':base_library:lib-utils'
 include ':base_library:lib-log'
@@ -19,12 +18,14 @@ include ':base_library:RecyclerView-ItemDecoration'
 include ':base_library:RecyclerView-Ext'
 include ':base_library:lib-widget'
 include ':base_library:lib-wheel'
+include ':base_library:lib_imageLoader'
+include ':base_library:lib_storage'
 
-//基础sdk库
+//业务组件库
 include ':library'
-
-//图片加载组建
-include ':library:ImageLoader'
-include ':library:photoview'
-include ':library:BaiduMap'
-include ':library:pay'
+include ':library:lib_video'
+include ':library:lib_share'
+include ':library:lib_download'
+include ':library:lib_pay'
+include ':library:lib_photoview'
+include ':library:lib_baiduMap'

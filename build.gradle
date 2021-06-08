@@ -33,7 +33,7 @@ allprojects {
             url "https://jitpack.io"
         }
         flatDir {
-            dirs project(':library:pay').file('libs'), 'libs'
+            dirs project(':library:lib_pay').file('libs'), 'libs'
         }
     }
 }

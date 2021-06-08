@@ -40,12 +40,14 @@
 ├        ├── fragment               // 业务层 Fragment封装
 ├        └── dialog                 // 业务层 Dialog封装
 ├
-├── business_library                【常用业务组件】
+├── library                        【常用业务组件】
 ├        ├── lib_video              // 视频组件封装
 ├        ├── lib_download           // 下载组件封装
 ├        ├── lib_share              // 分享组件封装
 ├        ├── lib_pay                // 支付组件封装
 ├        └── lib_baiduMap           // 百度地图定位
+├
+├── demo                           【使用demo】
 ├
 ├── app                             //应用层（直接引用基础业务模块 + 业务组件）
 ├        ├── SplashActivity         // 闪屏

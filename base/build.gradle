@@ -126,7 +126,7 @@ dependencies {
     api rootProject.ext.dependencies.immersionbar_ktx
 
     //图片加载框架
-    api project(path: ':library:ImageLoader')
+    api project(path: ':base_library:lib_imageLoader')
 
     //Room
     api rootProject.ext.dependencies.room_runtime

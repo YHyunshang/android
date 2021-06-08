@@ -58,7 +58,7 @@ dependencies {
 
     api project(":base")
 
-    api project(":library:pay")
+//    api project(":library:lib_pay")
 
     //ARouter注解处理器
     kapt rootProject.ext.dependencies.ARouter_processor
