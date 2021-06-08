@@ -19,7 +19,7 @@ public class YHApplication extends BaseUiApplication {
 
     @Override
     public void onCreate() {
-        CrashReport.initCrashReport(getApplicationContext(), "01b3d8ca6a", Config.isIsDebug());
+//        CrashReport.initCrashReport(getApplicationContext(), "appId", Config.isIsDebug());
         super.onCreate();
 //        EventBus.builder()
 //                .addIndex(new AppEventBusIndex())

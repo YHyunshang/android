@@ -1,10 +1,10 @@
 package com.yh
 
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.yh.android.demo.databinding.ActivityMainBinding
 import com.yh.base.ui.toast.ToastUtil
 import com.yh.base.utils.GsonUtil
 import com.yh.baseui.activity.BaseUIActivity
-import com.yh.tobtrading.databinding.ActivityMainBinding
 import com.yh.trading.constant.ARouterPathManager
 import com.yh.viewmodel.MainViewModel
 

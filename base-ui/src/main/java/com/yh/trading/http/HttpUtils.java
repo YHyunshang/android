@@ -37,66 +37,20 @@ public class HttpUtils {
             String str = MMKVUiManager.Companion.getToken();
             if (!TextUtils.isEmpty(str))
                 builder.addHeader("sign", str);
-            str = MMKVUiManager.Companion.getCityCode();
-            if (!TextUtils.isEmpty(str))
-                builder.addHeader("cityId", str);
-            str = MMKVUiManager.Companion.getCity();
-            if (!TextUtils.isEmpty(str))
-                builder.addHeader("cityName", URLEncoder.encode(str, "utf-8"));
-            double dou = MMKVUiManager.Companion.getLatitude();
-            if (dou != 0.0)
-                builder.addHeader("latitude", String.valueOf(dou));
-            dou = MMKVUiManager.Companion.getLongitude();
-            if (dou != 0.0)
-                builder.addHeader("longitude", String.valueOf(dou));
             Request request = builder.build();
             return chain.proceed(request);
         }
     }
 
-    static final String[] cityNameHeader = new String[]{"cityName"};
-
-    static final String[] cityNameTokenHeader = new String[]{"cityName", "sign"};
-
-    static final LastAdapter lastAdapter = new LastAdapter();
-    static final PageAdapter pageAdapter = new PageAdapter();
-    static final TimedAdapter timedAdapter = new TimedAdapter(3 * 60 * 1000);
-    static final LazyAdapter lazyAdapter = new LazyAdapter(3 * 60 * 1000);
-    static final RefreshAdapter refreshNow = new RefreshAdapter(0);
-    static final RefreshAdapter refreshNowToken = new RefreshAdapter(0);
-    static final RefreshAdapter refreshAdapter = new RefreshAdapter(3 * 60 * 1000);
-
-    static final RefreshAdapter refreshAdapterNoCity = new RefreshAdapter(3 * 60 * 1000);
-    static final RefreshAdapter refreshNowNoCity = new RefreshAdapter(0);
+    static final String[] signHeader = new String[]{"sign"};
+    static final TimedAdapter timedAdapter = new TimedAdapter(20 * 1000);
 
     static {
-        lastAdapter.setHeader(cityNameHeader);
-        pageAdapter.setHeader(cityNameHeader);
-        timedAdapter.setHeader(cityNameHeader);
-        lazyAdapter.setHeader(cityNameHeader);
-        refreshNow.setHeader(cityNameHeader);
-        refreshAdapter.setHeader(cityNameHeader);
-        refreshNowToken.setHeader(cityNameTokenHeader);
+        timedAdapter.setHeader(signHeader);//添加header识别（作为主键用于缓存）
     }
 
     public static void init() {
         Https.addInterceptor(new TokenInterceptor());
-        CacheManager.add(UrlUtil.getUrl() + "/item/detail", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/shop/detail", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/common/city/openingList", refreshNowNoCity);
-
-        CacheManager.add(UrlUtil.getUrl() + "/home/mktbanners", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/home/operationPositions", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/category/tree", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/home/favorite/items", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/home/recommend/items", refreshNow);
-        CacheManager.add(UrlUtil.getUrl() + "/home/recommend/shops", refreshNow);
-
-        CacheManager.add(UrlUtil.getUrl() + "/category/getItemsByShopId", refreshNowToken);
-//        CacheManager.add(UrlUtil.getUrl() + "/category/items", refreshNowToken);
-
         CacheManager.add(UrlUtil.getUrl() + "/home/tels", timedAdapter);
-
-
     }
 }

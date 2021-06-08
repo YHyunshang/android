@@ -41,27 +41,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    signingConfigs {
-        debug {
-            keyAlias 'trading'
-            keyPassword 'yhtrading123'
-            storeFile file('trading.ks')
-            storePassword 'yhtrading123'
-        }
-        release {
-            keyAlias 'trading'
-            keyPassword 'yhtrading123'
-            storeFile file('trading.ks')
-            storePassword 'yhtrading123'
-        }
-    }
 
     buildTypes {
         debug{
             debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
             ndk {
                 // 设置支持的SO库架构
 //            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
@@ -72,7 +57,6 @@ android {
             debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
             ndk {
                 // 设置支持的SO库架构
 //            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
@@ -98,7 +82,6 @@ android {
                 if (variant.name.contains("Release")) {
                     def fileName = "ToB_${defaultConfig.versionName}_release.apk"
                     output.outputFileName = fileName
-
                 } else {
                     def fileName = "ToB_${defaultConfig.versionName}_debug.apk"
                     output.outputFileName = fileName

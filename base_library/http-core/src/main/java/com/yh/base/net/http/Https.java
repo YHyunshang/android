@@ -112,9 +112,10 @@ public class Https {
     private static Retrofit createRetrofit(String url, boolean useCache, boolean useRxJava) {
         OkHttpClient.Builder okHttpClientBuilder = createOkHttpClientBuilder();
         try {
-            Interceptor interceptor = (Interceptor) Class.forName("com.yh.base.net.http.interceptor.CachedInterceptor").getConstructor(boolean.class).newInstance(useCache);
+            Interceptor interceptor = (Interceptor) Class.forName("com.yh.base.net.http.cache.CachedInterceptor").getConstructor(boolean.class).newInstance(useCache);
             okHttpClientBuilder.addInterceptor(interceptor);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         if (Config.isIsDebug()) {
             HttpLoggingInterceptor logInterceptor = new HttpLoggingInterceptor(new HttpLogger());
