@@ -63,7 +63,7 @@
 ```
 
 ### 1 核心框架
--- http-core         网络核心库（封装okttp、retrofit、livedata、RxJava2）
+-- http-core         网络核心库（封装okttp、retrofit、RxJava2）
 -- http-cache        全局网络缓存核心库（自动缓存，内存+磁盘）
 -- RecyclerView      基于RecyclerView进一步封装
     -- RecyclerView-Adapter                 RecyclerView 适配器封装
@@ -71,7 +71,7 @@
     -- RecyclerView-Ext                     RecyclerView扩展方法
 
 ### 2 基础模块
--- base  基础SDK模块（Activity/Fragment/Dialog、ARouter、EventBus）
+-- base  基础SDK模块（Activity/Fragment/Dialog、liveData、ViewBinding、ARouter、EventBus）
 -- lib_utils 基础工具类
 -- lib_log log模块
 -- lib_toast toast模块
@@ -101,7 +101,6 @@
 2. 编码格式统一为 UTF-8
 3. 代码格式化，统一使用 AndroidStudio 默认模板
 4. 推荐 Genymotion 模拟器，请移步 **[Genymotion官方网站][Genymotion官方网站]**
-
 
 ### 7 as 常用插件
 

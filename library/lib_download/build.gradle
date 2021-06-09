@@ -26,12 +26,5 @@ android {
 }
 
 dependencies {
-
     implementation project(":base")
-
-    //微信支付
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.23'
-
-    // 支付宝 SDK AAR 包所需的配置
-    implementation (name: 'alipaysdk-15.8.03.210428205839', ext: 'aar')
 }

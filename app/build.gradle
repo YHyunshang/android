@@ -119,4 +119,6 @@ dependencies {
     kapt rootProject.ext.dependencies.eventbus_annotation
 
     api 'com.tencent.bugly:crashreport:+'
+
+    implementation project(":library:lib_download")
 }

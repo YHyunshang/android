@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yh.sdk.pay">
+    package="com.yh.sdk.download">
 
-    <queries>
-        <!-- 指定微信包名-->
-        <package android:name="com.tencent.mm" />
-        <!-- 指定支付宝包名-->
-        <package android:name="com.eg.android.AlipayGphone" />
-        <package android:name="hk.alipay.wallet" />
-    </queries>
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application>
-
-        <activity android:name=".wechat.wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="wx77997957f712b4ed"/>
-            </intent-filter>
-
-        </activity>
 
     </application>
 </manifest>
