@@ -1,6 +1,6 @@
 package com.yh.trading;
 
-import com.yh.MainActivity;
+import com.yh.demo.activity.MainActivity;
 import com.yh.base.BaseApplication;
 
 import org.junit.Before;

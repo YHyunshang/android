@@ -126,7 +126,7 @@ dependencies {
     api rootProject.ext.dependencies.immersionbar_ktx
 
     //图片加载框架
-    api project(path: ':base_library:lib_imageLoader')
+    api project(path: ':library:lib-imageLoader')
 
     //Room
     api rootProject.ext.dependencies.room_runtime
@@ -135,10 +135,10 @@ dependencies {
 
 
     //http 请求
-//    api project(":base_library:http-core")
+//    api project(":library:http-core")
     //http 缓存
-    api project(":base_library:http-cache")
-    api project(":base_library:RecyclerView-Adapter")
-    api project(":base_library:RecyclerView-ItemDecoration")
-    api project(':base_library:lib-widget')
+    api project(":library:http-cache")
+    api project(":library:RecyclerView-Adapter")
+    api project(":library:RecyclerView-ItemDecoration")
+    api project(':library:lib-widget')
 }

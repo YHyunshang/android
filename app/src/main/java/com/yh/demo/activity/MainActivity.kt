@@ -1,4 +1,4 @@
-package com.yh
+package com.yh.demo.activity
 
 import android.app.ProgressDialog
 import android.os.Looper
@@ -6,12 +6,11 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.yh.android.demo.databinding.ActivityMainBinding
 import com.yh.base.ui.toast.ToastUtil
 import com.yh.base.utils.GsonUtil
-import com.yh.base.utils.Util
 import com.yh.baseui.activity.BaseUIActivity
 import com.yh.baseui.utils.ImageLoaderUtils
 import com.yh.sdk.download.DownloadUtil
 import com.yh.trading.constant.ARouterPathManager
-import com.yh.viewmodel.MainViewModel
+import com.yh.demo.viewmodel.MainViewModel
 
 
 @Route(path = ARouterPathManager.ActivityMain)

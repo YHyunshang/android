@@ -7,7 +7,7 @@
     android:background="#ff505050"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.yh.MainActivity">
+    tools:context="com.yh.demo.activity.MainActivity">
 
     <Button
         android:id="@+id/testNet"

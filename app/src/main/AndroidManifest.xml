@@ -15,10 +15,10 @@
         android:theme="@style/Theme.ToBApp">
 
         <activity
-            android:name="com.yh.MainActivity"
+            android:name="com.yh.demo.activity.MainActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.yh.SplashActivity"
+            android:name="com.yh.demo.activity.SplashActivity"
             android:theme="@style/Theme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

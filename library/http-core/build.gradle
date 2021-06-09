@@ -28,18 +28,21 @@ android {
 }
 
 dependencies {
-    api project(":base_library:lib-utils")
-    api project(":base_library:http-core")
+    implementation project(":library:lib-utils")
+//    implementation project(":base_library:http-cache")
 
-    //Glide
-    api rootProject.ext.dependencies.glide
-    api rootProject.ext.dependencies.glide_transformations
-    annotationProcessor rootProject.ext.dependencies.glide_compiler
+    //RXJava2
+    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxandroid2
+    api rootProject.ext.dependencies.rxbinding2
+
+    //gson
+    implementation rootProject.ext.dependencies.gson
 
     //okhttp retrofit
-    api rootProject.ext.dependencies.okhttp3
-    api rootProject.ext.dependencies.okhttp3_logging_interceptor
-    api rootProject.ext.dependencies.retrofit2
-    api rootProject.ext.dependencies.retrofit2_adapter_rxjava2
-    api rootProject.ext.dependencies.retrofit2_converter_gson
+    implementation rootProject.ext.dependencies.okhttp3
+    implementation rootProject.ext.dependencies.okhttp3_logging_interceptor
+    implementation rootProject.ext.dependencies.retrofit2
+    implementation rootProject.ext.dependencies.retrofit2_adapter_rxjava2
+    implementation rootProject.ext.dependencies.retrofit2_converter_gson
 }

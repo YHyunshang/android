@@ -1,4 +1,4 @@
-package com.yh.bean;
+package com.yh.demo.bean;
 
 import java.util.List;
 

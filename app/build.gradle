@@ -120,5 +120,5 @@ dependencies {
 
     api 'com.tencent.bugly:crashreport:+'
 
-    implementation project(":library:lib_download")
+    implementation project(":component:lib-download")
 }

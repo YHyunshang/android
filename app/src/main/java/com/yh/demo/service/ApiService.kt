@@ -1,7 +1,7 @@
-package com.yh.service;
+package com.yh.demo.service;
 
 import com.yh.base.net.bean.Rsp
-import com.yh.bean.ModelTels
+import com.yh.demo.bean.ModelTels
 import retrofit2.http.GET
 import retrofit2.http.Query
 

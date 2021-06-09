@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    api project(":base_library:lib-log")
+    api project(":library:lib-log")
     api rootProject.ext.dependencies.appcompat
     //gson
     api rootProject.ext.dependencies.gson

@@ -1,11 +1,11 @@
-package com.yh.viewmodel
+package com.yh.demo.viewmodel
 
 import com.yh.base.net.bean.Rsp
 import com.yh.base.net.http.Https
 import com.yh.base.ui.BaseViewModel
 import com.yh.base.ui.livedata.EventLiveData
-import com.yh.bean.ModelTels
-import com.yh.service.ApiService
+import com.yh.demo.bean.ModelTels
+import com.yh.demo.service.ApiService
 import com.yh.trading.utils.UrlUtil
 import kotlinx.coroutines.delay
 

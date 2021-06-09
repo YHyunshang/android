@@ -1,4 +1,4 @@
-package com.yh
+package com.yh.demo.activity
 
 import com.yh.android.demo.databinding.ActivitySplashBinding
 import com.yh.base.ui.BaseViewModel

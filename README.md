@@ -24,34 +24,39 @@
 ├        └── liveData               // MVVM LiveData封装
 ├        └── viewModel              // MVVM ViewModel封装
 ├
-├── base_library                    【基础组件】
+├── library                        【基础组件库】
 ├        ├── http-core              // 网络核心库
 ├        ├── http-cache             // 全局网络缓存（自动缓存，内存+磁盘）
 ├        ├── RecyclerView           // RecyclerView封装
-├        ├── lib_utils              // 常用工具类库
-├        ├── lib_log                // Log控制
-├        ├── lib_storage            // 存储封装（MMKV）
-├        ├── lib_toast              // Toast展示
-├        ├── lib_imageLoader        // 图片加载库（基于Glide）
-├        └── lib_widget             // 各种ui组件 Imageview RefreshActivity等
+├        ├── lib-imageLoader        // 图片加载库（基于Glide）
+├        ├── lib-utils              // 常用工具类库
+├        ├── lib-log                // Log控制
+├        ├── lib-storage            // 存储封装（MMKV）
+├        ├── lib-toast              // Toast展示
+├        └── lib-widget             // 各种ui组件 Imageview RefreshActivity等
 ├
 ├── base-ui                         【基础业务模块】
 ├        ├── activity               // 业务层 Activity封装
 ├        ├── fragment               // 业务层 Fragment封装
 ├        └── dialog                 // 业务层 Dialog封装
 ├
-├── library                        【常用业务组件】
-├        ├── lib_video              // 视频组件封装
-├        ├── lib_download           // 下载组件封装
-├        ├── lib_share              // 分享组件封装
-├        ├── lib_pay                // 支付组件封装
-├        └── lib_baiduMap           // 百度地图定位
+├── component                      【常用业务组件】
+├        ├── lib-video              // 视频组件封装
+├        ├── lib-download           // 下载组件封装
+├        ├── lib-share              // 分享组件封装
+├        ├── lib-pay                // 支付组件封装
+├        └── lib-baiduMap           // 百度地图定位
 ├
 ├── demo                           【使用demo】
 ├
-├── app                             //应用层（直接引用基础业务模块 + 业务组件）
-├        ├── SplashActivity         // 闪屏
-├        └──  MainActivity          // 主activity
+├── app                            【业务层】
+├        └── activity               // 定义activity
+├           ├── SplashActivity      // 闪屏
+├           └── MainActivity        // 主界面
+├        ├── fragment               // 定义fragment
+├        ├── viewmodel              // 定义viewmodel
+├        ├── bean                   // 定义data bean
+├        └── YHApplication          // 主application
 ├
 ├
 ├── build.gradle                    // 项目依赖gradle
