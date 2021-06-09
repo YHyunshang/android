@@ -5,6 +5,14 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.kunminx.architecture.ui.callback.UnPeekLiveData;
 
+/**
+ * @description livedata基类封装
+ *    同时支持succes refresh 和fail回调
+ *    可支持粘性和非粘性 unPeek：true：粘性 false：非粘性
+ *
+ * @date: 2021/4/6 4:11 PM
+ * @author: zhangzhiyuan
+ */
 public abstract class MyLiveData<T> {
     protected LiveData<T> onSuccess;
     protected LiveData<Error> onFail;

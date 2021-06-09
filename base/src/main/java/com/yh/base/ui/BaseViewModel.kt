@@ -60,31 +60,52 @@ open class BaseViewModel : ViewModel() {
         private var error: ((Error) -> Unit)? = null
         private var flag: Int = 0
 
+        /**
+         * 成功回调，参数为Rsp类型
+         */
         fun successRsp(success: ((Rsp<T>) -> Unit)?): request<T> {
             this.success1 = success
             return this
         }
 
+        /**
+         * 重复数据回调，参数为T类型（已自动判断code）
+         */
         fun refresh(refresh: (suspend () -> Rsp<T>)?): request<T> {
             this.refresh = refresh
             return this
         }
 
+        /**
+         * 成功回调，参数为T类型（已自动判断code）
+         */
         fun success(success: ((T?) -> Unit)?): request<T> {
             this.success = success
             return this
         }
 
+        /**
+         * 失败回调
+         */
         fun error(error: ((Error) -> Unit)?): request<T> {
             this.error = error
             return this
         }
 
+        /**
+         * flag：标志控制
+         * FLAG_NO_TOAST: 不展示toast（默认展示）
+         * FLAG_LOADING: 展示loading（默认不展示）
+         * FLAG_ERROR_LAYER: 展示toast（默认不展示）
+         */
         fun flag(flag: Int): request<T> {
             this.flag = flag
             return this
         }
 
+        /**
+         * 发起网络请求（传入需要接受数据的liveData）
+         */
         fun run(liveData: MyLiveData<T?>? = null) {
             if (refresh != null)
                 requestForRefresh(flag, block, refresh!!, { rsp: Rsp<T>, b: Boolean ->
@@ -107,6 +128,9 @@ open class BaseViewModel : ViewModel() {
                 })
         }
 
+        /**
+         * 发起网络请求（传入需要接受数据的liveData）
+         */
         @JvmName("rsp")
         fun run(liveData: MyLiveData<Rsp<T>>?) {
             if (refresh != null)

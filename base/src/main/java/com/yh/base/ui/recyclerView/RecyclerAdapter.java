@@ -12,6 +12,12 @@ import com.yh.base.utils.Reflector;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @description recyclerView的Adapter封装
+ *
+ * @date: 2021/4/6 4:11 PM
+ * @author: zhangzhiyuan
+ */
 public abstract class RecyclerAdapter<T, VB extends ViewBinding>
         extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     List<T> list = new ArrayList<>();

@@ -16,6 +16,14 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+/**
+ * @description 过滤刷新型livedata封装（过滤重复数据，防止多余刷新）
+ *    同时支持succes refresh 和fail回调
+ *    可支持粘性和非粘性 unPeek：true：粘性 false：非粘性
+ *
+ * @date: 2021/4/6 4:11 PM
+ * @author: zhangzhiyuan
+ */
 open class RefreshLiveData<T>(unPeek: Boolean = true) : MyLiveData<T>(unPeek) {
     private val onRefresh: LiveData<T> = if (unPeek) {
         UnPeekLiveData.Builder<T>().setAllowNullValue(true).create()

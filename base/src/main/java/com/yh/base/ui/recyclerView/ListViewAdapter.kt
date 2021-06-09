@@ -8,7 +8,12 @@ import androidx.viewbinding.ViewBinding
 import com.yh.base.ui.ext.getVbClazz
 import com.yh.base.utils.Reflector
 
-
+/**
+ * @description listView的Adapter封装
+ *
+ * @date: 2021/4/6 4:11 PM
+ * @author: zhangzhiyuan
+ */
 abstract class ListViewAdapter<T, VB : ViewBinding>(mList: List<T>) : BaseAdapter() {
     var mList: List<T> = mList
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {

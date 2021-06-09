@@ -8,6 +8,14 @@ import com.kunminx.architecture.ui.callback.UnPeekLiveData
 import com.yh.base.constant.Config
 import com.yh.base.utils.DebugUtil
 
+/**
+ * @description 常规livedata封装
+ *    同时支持succes和fail回调
+ *    可支持粘性和非粘性 unPeek：true：粘性 false：非粘性
+ *
+ * @date: 2021/4/6 4:11 PM
+ * @author: zhangzhiyuan
+ */
 open class EventLiveData<T>(unPeek: Boolean = true) : MyLiveData<T>(unPeek) {
     open fun observe(activity: FragmentActivity, success: (T) -> Unit, fail: ((Error) -> Unit)? = null) {
         if (onSuccess is UnPeekLiveData) {
