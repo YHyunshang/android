@@ -37,7 +37,7 @@ import com.yh.base.utils.UIUtil
 abstract class BaseActivity<VM : BaseViewModel, VB : ViewBinding> : AppCompatActivity(), IDelegateUI {
 
     protected lateinit var mViewModel: VM
-    public lateinit var mViewBinding: VB
+    lateinit var mViewBinding: VB
 
     private lateinit var mPopProgress: PopProgress
 
@@ -202,6 +202,9 @@ abstract class BaseActivity<VM : BaseViewModel, VB : ViewBinding> : AppCompatAct
         return false
     }
 
+    /**
+     * 初始化类相关的工作，如注入等
+     */
     override fun initParams() {
         ARouter.getInstance().inject(this)
     }
